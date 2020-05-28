@@ -75,7 +75,7 @@ body{
 .red{
     background: #ff7a7a3d;
     color: #ff7a7a;
-    transition-property: color, background, transform, border-radius;
+    transition-property: color, background;
     transition-duration: 200ms;
 }
 .red:active{
@@ -86,7 +86,7 @@ body{
 .blue{
     background: #00c3ff3d;
     color: #00c3ff;
-    transition-property: color, background, transform, border-radius;
+    transition-property: color, background;
     transition-duration: 200ms;
 }
 .blue:active{
@@ -97,7 +97,7 @@ body{
 .purple{
     background: #927aff3d;
     color: #927aff;
-    transition-property: color, background, transform, border-radius;
+    transition-property: color, background;
     transition-duration: 200ms;
 
 }
@@ -110,7 +110,7 @@ body{
 .green{
     background: #29dd983d;
     color: #29dd98;
-    transition-property: color, background, transform, border-radius;
+    transition-property: color, background;
     transition-duration: 200ms;
 }
 .green:active{

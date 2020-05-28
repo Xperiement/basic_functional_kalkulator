@@ -89,10 +89,8 @@ body {
 .red {
   background: #ff7a7a3d;
   color: #ff7a7a;
-  -webkit-transition-property: color, background, border-radius, -webkit-transform;
-  transition-property: color, background, border-radius, -webkit-transform;
-  transition-property: color, background, transform, border-radius;
-  transition-property: color, background, transform, border-radius, -webkit-transform;
+  -webkit-transition-property: color, background;
+  transition-property: color, background;
   -webkit-transition-duration: 200ms;
           transition-duration: 200ms;
 }
@@ -105,10 +103,8 @@ body {
 .blue {
   background: #00c3ff3d;
   color: #00c3ff;
-  -webkit-transition-property: color, background, border-radius, -webkit-transform;
-  transition-property: color, background, border-radius, -webkit-transform;
-  transition-property: color, background, transform, border-radius;
-  transition-property: color, background, transform, border-radius, -webkit-transform;
+  -webkit-transition-property: color, background;
+  transition-property: color, background;
   -webkit-transition-duration: 200ms;
           transition-duration: 200ms;
 }
@@ -121,10 +117,8 @@ body {
 .purple {
   background: #927aff3d;
   color: #927aff;
-  -webkit-transition-property: color, background, border-radius, -webkit-transform;
-  transition-property: color, background, border-radius, -webkit-transform;
-  transition-property: color, background, transform, border-radius;
-  transition-property: color, background, transform, border-radius, -webkit-transform;
+  -webkit-transition-property: color, background;
+  transition-property: color, background;
   -webkit-transition-duration: 200ms;
           transition-duration: 200ms;
 }
@@ -137,10 +131,8 @@ body {
 .green {
   background: #29dd983d;
   color: #29dd98;
-  -webkit-transition-property: color, background, border-radius, -webkit-transform;
-  transition-property: color, background, border-radius, -webkit-transform;
-  transition-property: color, background, transform, border-radius;
-  transition-property: color, background, transform, border-radius, -webkit-transform;
+  -webkit-transition-property: color, background;
+  transition-property: color, background;
   -webkit-transition-duration: 200ms;
           transition-duration: 200ms;
 }
