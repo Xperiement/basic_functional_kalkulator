@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <input id="output" class="oContainer" placeholder="0.0"/>
+        <div class="buttonsContainer">
+            <button onclick="addExp('1')" class="btn red">1</button>
+            <button onclick="addExp('2')" class="btn blue">2</button>
+            <button onclick="addExp('3')" class="btn purple">3</button>
+            <button onclick="clearOutput()" class="btn red" style="font-size: 1.5rem;">CE</button>
+            <button onclick="addExp('4')" class="btn purple">4</button>
+            <button onclick="addExp('5')" class="btn red">5</button>
+            <button onclick="addExp('6')" class="btn blue">6</button>
+            <button onclick="clearLastExp()" class="btn green">C</button>
+            <button onclick="addExp('+')" class="btn pelus purple">+</button>
+            <button onclick="addExp('7')" class="btn blue">7</button>
+            <button onclick="addExp('8')" class="btn purple">8</button>
+            <button onclick="addExp('9')" class="btn red">9</button>
+            <button onclick="addExp('.')" class="btn red">.</button>
+            <button onclick="addExp('0')" class="btn green">0</button>
+            <button onclick="addExp('-')" class="btn blue">-</button>
+            <button onclick="addExp('%')" class="btn green">%</button>
+            <button onclick="addExp('/')" class="btn blue">/</button>
+            <button onclick="addExp('x')" class="btn purple">x</button>
+            <button onclick="calculate()" class="btn equal green">=</button>
+        </div>
+    </div>
+</body>
+</html>
