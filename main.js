@@ -35,7 +35,7 @@ function calcRecursive(str){
     var flag=1;
     var perNxtExp;
     var sndflag=0;
-    if(str.indexOf('%')==-1&&str.indexOf('/')==-1&&str.indexOf('x')==-1&&str.indexOf('+')==-1&&str.indexOf('-')==-1){
+    if(str.indexOf('%')==-1&&str.indexOf('/')==-1&&str.indexOf('x')==-1&&str.indexOf('*')==-1&&str.indexOf('+')==-1&&str.indexOf('-')==-1){
         return parseFloat(str);
     }else{
         if(str.indexOf('%')!=-1){
@@ -43,7 +43,7 @@ function calcRecursive(str){
             initExp=5;
             initExpPos=str.indexOf('%');
             var sdiv=str.substring(0,initExpPos);
-            var lastExpIndex=big(sdiv.lastIndexOf('/'),big(sdiv.lastIndexOf('x'),big(sdiv.lastIndexOf('+'),sdiv.lastIndexOf('-'))));
+            var lastExpIndex=big(sdiv.lastIndexOf('/'),big(sdiv.lastIndexOf('x'),big(sdiv.lastIndexOf('*'),big(sdiv.lastIndexOf('+'),sdiv.lastIndexOf('-')))));
             var perVal=parseFloat(sdiv.substring(lastExpIndex+1,sdiv.length));
             var perExp=sdiv[lastExpIndex];
             val1=calcRecursive(str.substring(0,lastExpIndex));
@@ -56,10 +56,10 @@ function calcRecursive(str){
             }
             if(perExp=='/'){
                 value=(val1/perVal)*100;
-            }else if(perExp=='x'){
+            }else if(perExp=='x'||perExp=='*'){
                 value=(val1*perVal)/100;
             }else if(perExp=='+'){
-                if(perNxtExp=='x'){
+                if(perNxtExp=='x'||perNxtExp=='*'){
                     value=val1+((perVal/100)*val2);
                     sndflag=1;
                 }else if(perNxtExp=='/'){
@@ -69,7 +69,7 @@ function calcRecursive(str){
                     value=val1+((val1*perVal)/100);
                 }
             }else if(perExp=='-'){
-                if(perNxtExp=='x'){
+                if(perNxtExp=='x'||perNxtExp=='*'){
                     value=val1-((perVal/100)*val2);
                     sndflag=1;
                 }else if(perNxtExp=='/'){
@@ -83,7 +83,7 @@ function calcRecursive(str){
             if(sndflag==0){
                 if(perNxtExp=='/'){
                     value=value/val2;
-                }else if(perNxtExp=='x'){
+                }else if(perNxtExp=='x'||perNxtExp=='*'){
                     value=value*val2;
                 }else if(perNxtExp=='+'){
                     value=value+val2;
@@ -101,6 +101,9 @@ function calcRecursive(str){
         }else if(str.indexOf('x')!=-1){
             initExp=2;
             initExpPos=str.indexOf('x');
+        }else if(str.indexOf('*')!=-1){
+            initExp=2;
+            initExpPos=str.indexOf('*');
         }else{
             initExp=1;
             initExpPos=str.indexOf('/');
