@@ -1,7 +1,28 @@
-
-function bhosdk(){
-    document.getElementById("output").value="Hello";
+var mode=1;
+function modeChanger(){
+    if(mode==1){
+        document.body.style.background="black";
+        document.getElementById("moder").innerHTML="DARK";
+        document.getElementById("titleApp").style["color"]="white";
+        document.getElementById("moder").style["color"]="white";
+        document.getElementById("moder").style["background"]="black";
+        document.getElementById("epicX").style["fill"]="white";
+        mode=2;
+    }else{
+        document.body.style.background="white";
+        document.getElementById("moder").innerHTML="LIGHT";
+        document.getElementById("titleApp").style["color"]="#353535";
+        document.getElementById("moder").style["color"]="black";
+        document.getElementById("moder").style["background"]="white";
+        document.getElementById("epicX").style["fill"]="black";
+        mode=1;
+    }
 }
+
+
+
+
+//Basic Calculator
 function addExp(exp){
     var tmp=document.getElementById("output").value;
     if(tmp=="NaN"||tmp=="Null"||tmp=="undefined"){

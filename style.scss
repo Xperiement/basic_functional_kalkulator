@@ -9,6 +9,64 @@ body{
     place-items: center;
     height: 100vh;
     //background: #000000;
+    transition: background 280ms ease;
+}
+
+.c_head{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: .1rem solid #9c9c9c;
+    z-index: 69;
+    a{
+        text-decoration: none;
+        user-select: none;
+        color: #353535;
+        font-size: 2rem;
+        padding-left: 1rem;
+        font-family: Product Sans;
+
+    }
+    .modeClass{
+        border: 0;
+        width: 6rem;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        font-family: Product Sans;
+        height: 100%;
+        background: white;
+        transition-property: color, background;
+        transition-duration: 280ms;
+
+    }
+    .modeClass:active{
+        background: #8d8d8d;
+    }
+}
+.c_footer{
+    position: fixed;
+    bottom: 2%;
+    width: 100%;
+    height: 2.2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    //background: #ff8e8e;
+    a{
+        height: 100%;
+    }
+    svg{
+        padding-left: 1rem;
+        height: 90%;
+        transition: fill 280ms ease;
+    }
 }
 
 .container{
