@@ -43,7 +43,7 @@ function calcRecursive(str){
             initExp=5;
             initExpPos=str.indexOf('%');
             var sdiv=str.substring(0,initExpPos);
-            var lastExpIndex=big(sdiv.indexOf('/'),big(sdiv.indexOf('x'),big(sdiv.indexOf('+'),sdiv.indexOf('-'))));
+            var lastExpIndex=big(sdiv.lastIndexOf('/'),big(sdiv.lastIndexOf('x'),big(sdiv.lastIndexOf('+'),sdiv.lastIndexOf('-'))));
             var perVal=parseFloat(sdiv.substring(lastExpIndex+1,sdiv.length));
             var perExp=sdiv[lastExpIndex];
             val1=calcRecursive(str.substring(0,lastExpIndex));
